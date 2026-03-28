@@ -245,7 +245,7 @@ Body:
 GET /users/edit
 ```
 
-Authorizathion:
+Authorization:
 
 ```Bearer Token
 {
@@ -261,7 +261,7 @@ Authorizathion:
 PATCH /users/edit
 ```
 
-Authorizathion:
+Authorization:
 
 ```Bearer Token
 {
@@ -286,7 +286,7 @@ Body:
 PATCH /users/password
 ```
 
-Authorizathion:
+Authorization:
 
 ```Bearer Token
 {
@@ -311,7 +311,7 @@ Body:
 PATCH /users/upload
 ```
 
-Authorizathion:
+Authorization:
 
 ```Bearer Token
 {
