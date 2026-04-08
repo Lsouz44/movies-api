@@ -1,19 +1,23 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Movie } from "src/movies/entities/movie.entity";
+import { Column, Entity, PrimaryGeneratedColumn, OneToMany } from "typeorm";
 
 @Entity()
 export class User {
     @PrimaryGeneratedColumn()
-    id: number;
+    id: number | undefined;
 
-    @Column()
-    name: string;
+    @Column({ type: 'varchar', nullable: false })
+    name: string | undefined;
 
-    @Column({ unique: true })
-    email: string;
+    @Column({ type: 'varchar', unique: true, nullable: false })
+    email: string | undefined;
 
-    @Column()
-    password: string;
+    @Column({ type: 'varchar', nullable: false })
+    password: string | undefined;
 
-    @Column({ nullable: true })
-    avatar: string;
+    @Column({ type: 'varchar', nullable: true })
+    avatar: string | undefined;
+
+    @OneToMany(() => Movie, movie => movie.user)
+    movies: Movie[] | undefined;
 }
