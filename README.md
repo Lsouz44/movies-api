@@ -328,6 +328,106 @@ value: arquivoDaFoto.png
 
 ---
 
+### Criar um filme
+
+```
+POST /movies/create
+```
+
+Authorization:
+
+```Bearer Token
+{
+  tokendeacessoaqui
+}
+```
+
+Body:
+
+```json
+{
+    "title": "Interstellar",
+    "description": "Filme muito bom",
+    "rating": 5
+}
+```
+
+---
+
+### Buscar todos os filmes do usuário
+
+```
+GET /movies
+```
+
+Authorization:
+
+```Bearer Token
+{
+  tokendeacessoaqui
+}
+```
+
+---
+
+### Buscar um filme do usuário
+
+```
+GET /movies/:id
+```
+
+Authorization:
+
+```Bearer Token
+{
+  tokendeacessoaqui
+}
+```
+
+---
+
+### Atualizar info de um filme
+
+```
+PATCH /movies/:id
+```
+
+Authorization:
+
+```Bearer Token
+{
+  tokendeacessoaqui
+}
+```
+
+Body:
+
+```json
+{
+    "title": "Interstellar 2",
+    "description": "Filme top das galáxias",
+    "rating": 4.6
+}
+```
+
+---
+
+### Deletar um filme do usuário
+
+```
+DELETE /movies/:id
+```
+
+Authorization:
+
+```Bearer Token
+{
+  tokendeacessoaqui
+}
+```
+
+---
+
 # 🎓 Sobre o Projeto
 
 Este projeto foi desenvolvido com fins **educacionais**, durante um minicurso de backend promovido para **Tristate Consultoria**, com o objetivo de introduzir o desenvolvimento de APIs utilizando **NestJS + PostgreSQL**.
